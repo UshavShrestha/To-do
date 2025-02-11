@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Comic Sans MS', 'Comic Neue', cursive;
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background 0.5s ease-in-out;
+}
+
+.wrapper {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.wrapper:hover {
+    transform: scale(1.03);
+}
+
+.title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.input-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.task-field {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.task-field:focus {
+    border-color: #ff6f61;
+    box-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+}
+
+.add-btn {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.add-btn:hover {
+    background: #218838;
+    transform: scale(1.1);
+}
+
+.filter-options {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.filter-btn {
+    margin: 5px;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.filter-btn:hover {
+    transform: scale(1.1);
+}
+
+.active-filter {
+    background-color: #28a745;
+    color: white;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 2px solid #ddd;
+    background: #fff;
+    border-radius: 8px;
+    margin: 8px 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.task-item:hover {
+    transform: translateX(10px);
+}
+
+.done {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.action-btn:hover {
+    transform: scale(1.2);
+}
+
+.remove-btn {
+    color: red;
+}
+
+.complete-btn {
+    color: green;
+}

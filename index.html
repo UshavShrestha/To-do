@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="title">To Do App</h1>
+        <div class="input-section">
+            <input type="text" id="taskField" class="task-field" placeholder="Enter a task">
+            <button id="addBtn" class="add-btn"><i class="fa fa-plus"></i></button>
+        </div>
+        <div class="filter-options">
+            <button data-filter="all" class="filter-btn active-filter">All</button>
+            <button data-filter="completed" class="filter-btn">Completed</button>
+            <button data-filter="pending" class="filter-btn">Pending</button>
+        </div>
+        <ul id="taskList" class="task-list"></ul>
+    </div>
+</body>
+</html>
