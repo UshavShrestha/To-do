@@ -4,11 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const taskList = document.getElementById("taskList");
     const filterBtns = document.querySelectorAll(".filter-btn");
 
-    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-
-    function saveTasks() {
-        localStorage.setItem("tasks", JSON.stringify(tasks));
-    }
+    let tasks = [];
 
     function showTasks(filter = "all") {
         taskList.innerHTML = "";
@@ -42,7 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const taskText = taskField.value.trim();
         if (taskText) {
             tasks.push({ text: taskText, done: false });
-            saveTasks();
             showTasks();
 
             taskField.value = "";
@@ -69,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
             taskItem.style.opacity = "0";
             setTimeout(() => {
                 tasks.splice(index, 1);
-                saveTasks();
                 showTasks();
             }, 300);
         }
@@ -77,7 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.target.closest(".complete-btn")) {
             const index = e.target.closest(".complete-btn").dataset.index;
             tasks[index].done = !tasks[index].done;
-            saveTasks();
             showTasks();
         }
     });
