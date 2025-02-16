@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Comic Sans MS', 'Comic Neue', cursive;
-    background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+    background: linear-gradient(120deg, #b29aff, #c4fae8, #b29aff);
     display: flex;
     justify-content: center;
     align-items: center;
